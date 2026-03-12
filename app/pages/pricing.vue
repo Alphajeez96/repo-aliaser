@@ -29,10 +29,7 @@ const items = ref([
 
 <template>
   <div v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-    >
+    <UPageHero :title="page.title" :description="page.description">
       <template #links>
         <UTabs
           v-model="isYearly"
@@ -72,10 +69,7 @@ const items = ref([
       </UPageLogos>
     </UPageSection>
 
-    <UPageSection
-      :title="page.faq.title"
-      :description="page.faq.description"
-    >
+    <UPageSection :title="page.faq.title" :description="page.faq.description">
       <UAccordion
         :items="page.faq.items"
         :unmount-on-hide="false"

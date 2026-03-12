@@ -15,20 +15,13 @@ useSeoMeta({
 
 <template>
   <div v-if="page">
-    <UPageHero
-      :title="page.title"
-      :description="page.description"
-      :links="page.hero.links"
-    >
+    <UPageHero :title="page.title" :description="page.description" :links="page.hero.links">
       <template #top>
         <HeroBackground />
       </template>
 
       <template #title>
-        <MDC
-          :value="page.title"
-          unwrap="p"
-        />
+        <MDC :value="page.title" unwrap="p" />
       </template>
 
       <PromotionalVideo />
@@ -46,10 +39,7 @@ useSeoMeta({
       <ImagePlaceholder />
     </UPageSection>
 
-    <UPageSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
+    <UPageSection :title="page.features.title" :description="page.features.description">
       <UPageGrid>
         <UPageCard
           v-for="(item, index) in page.features.items"
@@ -75,10 +65,7 @@ useSeoMeta({
           :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
           <template #footer>
-            <UUser
-              v-bind="testimonial.user"
-              size="lg"
-            />
+            <UUser v-bind="testimonial.user" size="lg" />
           </template>
         </UPageCard>
       </UPageColumns>
@@ -86,11 +73,7 @@ useSeoMeta({
 
     <USeparator />
 
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    >
+    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
   </div>
