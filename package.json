@@ -8,7 +8,8 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "typecheck": "nuxt typecheck"
+    "typecheck": "nuxt typecheck",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.95",
@@ -27,6 +28,7 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
     "eslint": "^10.0.2",
+    "prettier": "^3.4.2",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.5"
   },

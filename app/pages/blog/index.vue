@@ -19,10 +19,7 @@ defineOgImageComponent('Saas')
 
 <template>
   <UContainer>
-    <UPageHeader
-      v-bind="page"
-      class="py-[50px]"
-    />
+    <UPageHeader v-bind="page" class="py-[50px]" />
 
     <UPageBody>
       <UBlogPosts>
@@ -33,7 +30,13 @@ defineOgImageComponent('Saas')
           :title="post.title"
           :description="post.description"
           :image="post.image"
-          :date="new Date(post.date).toLocaleDateString('en', { year: 'numeric', month: 'short', day: 'numeric' })"
+          :date="
+            new Date(post.date).toLocaleDateString('en', {
+              year: 'numeric',
+              month: 'short',
+              day: 'numeric'
+            })
+          "
           :authors="post.authors"
           :badge="post.badge"
           :orientation="index === 0 ? 'horizontal' : 'vertical'"
