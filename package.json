@@ -9,7 +9,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
     "typecheck": "nuxt typecheck",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "prepare": "husky"
   },
   "dependencies": {
     "@iconify-json/lucide": "^1.2.95",
@@ -28,9 +29,19 @@
   "devDependencies": {
     "@nuxt/eslint": "^1.15.2",
     "eslint": "^10.0.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.4.0",
     "prettier": "^3.4.2",
     "typescript": "^5.9.3",
     "vue-tsc": "^3.2.5"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ],
+    "*.{js,ts,vue,css,scss,md,json,yml,yaml}": [
+      "prettier --write"
+    ]
   },
   "packageManager": "pnpm@10.30.3"
 }
